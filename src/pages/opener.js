@@ -12,10 +12,10 @@ class Opener extends Component {
             <div className="opener">
                 <h1>Pick a site to visit - {this.props.sitePage}</h1>
                 <div id="sites">
-                    <div style={{marginLeft: '20px'}}><Site site={"bikes"}/></div>
-                    <div style={{marginLeft: '220px'}}><Site site={"sofas"}/></div>
-                    <div style={{marginLeft: '420px'}}><Site site={"hats"}/></div>
-                    <div style={{marginLeft: '620px'}}><Site site={"plants"}/></div>
+                    <div style={{marginLeft: '2vw'}}><Site site={"bikes"}/></div>
+                    <div style={{marginLeft: '15vw'}}><Site site={"sofas"}/></div>
+                    <div style={{marginLeft: '29vw'}}><Site site={"hats"}/></div>
+                    <div style={{marginLeft: '43vw'}}><Site site={"plants"}/></div>
                 </div>
             </div>
          );

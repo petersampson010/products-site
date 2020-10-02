@@ -40,3 +40,34 @@ h1{
   display: flex;
   justify-content: center;
 }
+
+#products-list-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 75vh;
+  background-color: aqua;
+}
+
+#products-list{
+  width: 90vw;
+  height: 60vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product-item{
+  height: 40vh;
+  width: 24vw;
+  background-color: red;
+  margin-bottom: 5vh;
+}
+
+.product-item-image{
+  height: 50%;
+  object-fit: contain;
+}

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 import Header from '../components/header';
 import NavBar from '../components/navbar';
-import HorizontalSlider from '../components/horizontalSlider';
+import Carousel from '../components/Carousel/carousel';
 
 class Home extends Component {
-    state = {  }
+
     render() { 
         return ( 
             <div>
                 <Header/>
                 <NavBar/>
-                <HorizontalSlider/>
+                <Carousel/>
             </div>
          );
     }
