@@ -5,15 +5,10 @@ import Header from '../components/header';
 import NavBar from '../components/navbar';
 import ProductsList from '../components/Products/productsList';
 import SearchBar from '../components/searchBar';
-import { setProducts } from '../redux/actions';
 
 class Products extends Component {
 
     componentDidMount() {
-        console.log('http://localhost:3000/' + this.props.sitePage)
-        fetch('http://localhost:3000/' + this.props.sitePage)
-        .then(res => res.json())
-        .then(data => this.props.setProducts(data))
       }
 
     render() { 
@@ -36,7 +31,6 @@ const mapStateToProps = state => {
   
   const mapDispatchToProps = dispatch => {
     return {
-      setProducts: products => dispatch(setProducts(products))
     }
   }
  

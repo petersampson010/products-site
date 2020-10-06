@@ -1,6 +1,7 @@
 const initialState = {
     sitePage: 'null',
     products: [],
+    productFields: [],
     carouselSlidesData: {
         'null': [],
         'bikes': [
@@ -59,12 +60,9 @@ const rootReducer = (state = initialState, action) => {
         case "SETSITEPAGE":
             return {...state, sitePage: action.site};
         case "SETSITEPRODUCTS":
-            return {...state, products: action.products}
+          return {...state, products: action.products, productFields: Object.keys(action.products[0])}
         case "SETSITECAROUSEL":
             return {...state, carousel: action.carousel}
-        case "SETPRODUCTS":
-            console.log(action.products);
-            return {...state, products: action.products}
         default: 
             return state;
     }

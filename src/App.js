@@ -5,7 +5,7 @@ import Home  from './pages/home';
 import Products from './pages/products';
 import Opener from './pages/opener';
 
-import './App.css';
+import './App.scss';
 import Basket from './pages/basket';
 
 function App() {

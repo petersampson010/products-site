@@ -18,10 +18,3 @@ export const setSiteCarousel = carousel => {
         carousel
     }
 }
-
-export const setProducts = products => {
-    return {
-        type: "SETPRODUCTS",
-        products
-    }
-}
