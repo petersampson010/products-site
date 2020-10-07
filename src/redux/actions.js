@@ -13,8 +13,15 @@ export const  setSiteProducts = products => {
 }
 
 export const setSiteCarousel = carousel => {
-    return{
+    return {
         type: "SETSITECAROUSEL",
         carousel
+    }
+}
+
+export const updateRenderedProducts = products => {
+    return {
+        type: "UPDATERENDEREDPRODUCTS",
+        products
     }
 }

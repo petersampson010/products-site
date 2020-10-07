@@ -8,7 +8,7 @@ class ProductsList extends Component {
         return ( 
             <div id='products-list-container'>
                 <div id='products-list'>
-                    {this.props.products.map(product => <ProductItem product={product}/>)}
+                    {this.props.renderedProducts.map(product => <ProductItem product={product}/>)}
                 </div>
             </div>
          );
@@ -17,7 +17,7 @@ class ProductsList extends Component {
 
 const mapStateToProps = state => {
     return {
-        products: state.products
+        renderedProducts: state.renderedProducts
     }
 }
 
