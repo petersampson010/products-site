@@ -25,3 +25,4 @@ export const updateRenderedProducts = products => {
         products
     }
 }
+

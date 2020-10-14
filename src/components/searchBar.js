@@ -19,7 +19,7 @@ class SearchBar extends Component {
     }
 
     componentDidUpdate() {
-        console.log(this.state);
+        // console.log(this.state);
     }
 
     componentDidMount() {
@@ -50,14 +50,10 @@ class SearchBar extends Component {
     }
 
     formProducer = field => {
-        console.log('here');
-        console.log(field);
         switch(field) {
             case "colour":
-                console.log('colour hit');
                 let colours = this.props.products.map(prod => prod.colour);
                 colours = [...new Set(colours)];
-                console.log(colours);
                 return <label for="colours">Colour
                     <select id="colours" name="colours" onChange={e=>this.setState({...this.state, fields: {...this.state.fields, colour: e.target.value}})}>
                         <option value="none">None</option>
@@ -85,7 +81,7 @@ class SearchBar extends Component {
                 let seats = this.props.products.map(prod => prod.seats);
                 seats = [...new Set(seats)];
                 return <label>Seats
-                    <select id="seats" name="seats" onChange={e=>this.setState({...this.state, fields: {...this.state.fields, seats: e.target.value}})}>
+                    <select id="seats" name="seats" onChange={e=>this.setState({...this.state, fields: {...this.state.fields, seats: parseInt(e.target.value)}})}>
                         <option value="none">None</option>
                         {seats.map(s => <option value={s}>{s}</option>)}
                     </select>

@@ -1,16 +1,40 @@
 import React, { Component } from 'react';
+// import { Modal } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import ProductsModal from './ProductsModal';
 
 class ProductItem extends Component {
-    state = {  }
+
+    state={
+        modal: false
+    }
+
+    reverseModal = () => {
+        console.log('hit also');
+        this.setState({modal: !this.state.modal})
+
+        // console.log("before: " + this.state.modal);
+        // this.setState({modal: !this.state.modal});
+        // console.log("after: " + this.state.modal);
+    }
+
     render() { 
+        const { product } = this.props
         return ( 
-            <div className='product-item'>
-                <img className='product-item-image' src={this.props.product['image']} alt='so annoying'/>
-                <h4>{this.props.product['title']}</h4>
-                <div>£{this.props.product['price']}</div>
+            <div id="product-item" onClick={this.state.modal ? null : this.reverseModal}>
+                {this.state.modal ? <ProductsModal reverseModal={this.reverseModal} product={product}/> :  null}
+                <img className='product-item-image' src={product['image']} alt='so annoying'/>
+                <h4>{product['title']}</h4>
+                <div>£{product['price']}</div>
             </div>
          );
     }
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+
+    }
+}
  
-export default ProductItem;
+export default connect(null, mapDispatchToProps)(ProductItem);
