@@ -26,3 +26,9 @@ export const updateRenderedProducts = products => {
     }
 }
 
+export const addToBasket = product => {
+    return {
+        type: "ADDTOBASKET",
+        product
+    }
+}

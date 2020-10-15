@@ -53,7 +53,8 @@ const initialState = {
             content: 'carry on your collection with our new range of smaller pots and plants'
           }
         ]
-      }
+      },
+      basket: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -62,11 +63,10 @@ const rootReducer = (state = initialState, action) => {
             return {...state, sitePage: action.site};
         case "SETSITEPRODUCTS":
             return {...state, products: action.products, renderedProducts: action.products, productFields: Object.keys(action.products[0])}
-        // case "SETSITECAROUSEL":
-        //     return {...state, carousel: action.carousel}
         case "UPDATERENDEREDPRODUCTS":
-          console.log(action.products)
             return {...state, renderedProducts: action.products}
+        case "ADDTOBASKET":
+          return {...state, basket: [...state.basket, action.product]}
         default: 
             return state;
     }
