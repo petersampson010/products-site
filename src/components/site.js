@@ -28,14 +28,14 @@ class Site extends Component {
 
     render() { 
         return ( 
-            <NavLink exact to={'/home'}>
+            <NavLink exact to={'/home'} className="navlink">
                 <div className="site" onClick={() => this.fetchSiteData(this.props.site)}>
                     <div>
                         <img src={this.props.image} alt="site"/>
                     </div>
                     <div>
-                        <h2>The Sites Header - {this.props.site}</h2>
-                        <p>Description of what the site is selling and the style implemented to accomodate the products</p>
+                        <h2 id="site-header">The Sites Header - {this.props.site}</h2>
+                        <p id="site-intro">Description of what the site is selling and the style implemented to accomodate the products</p>
                     </div>
 
                 </div>

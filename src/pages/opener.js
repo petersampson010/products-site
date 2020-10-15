@@ -10,7 +10,9 @@ class Opener extends Component {
     render() { 
         return ( 
             <div className="opener">
-                <h1>Pick a site to visit - {this.props.sitePage}</h1>
+                <h1 id="welcome-header">Welcome!</h1>
+                <h1 id="welcome">Please chose a site you would like to visit</h1>
+                <h1 id="side-note">These are all example pages and nothing shown here is for sale. The site has been designed in this way to display the use of multiple reusable components. Every site has different products and information but the same React components rendering them. </h1>
                 <div id="sites">
                     <div style={{marginLeft: '2vw'}}><Site site={"bikes"}/></div>
                     <div style={{marginLeft: '15vw'}}><Site site={"sofas"}/></div>
