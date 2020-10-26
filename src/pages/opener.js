@@ -11,14 +11,16 @@ class Opener extends Component {
         return ( 
             <div className="opener">
                 <h1 id="welcome-header">Welcome!</h1>
-                <h1 id="welcome">Please chose a site you would like to visit</h1>
-                <h1 id="side-note">These are all example pages and nothing shown here is for sale. The site has been designed in this way to display the use of multiple reusable components. Every site has different products and information but the same React components rendering them. </h1>
+                <div id="cloud">
+                    <h2 id="cloud-text">Please chose a site you would like to visit</h2>
+                </div>   
                 <div id="sites">
-                    <div style={{marginLeft: '2vw'}}><Site site={"bikes"}/></div>
-                    <div style={{marginLeft: '15vw'}}><Site site={"sofas"}/></div>
-                    <div style={{marginLeft: '29vw'}}><Site site={"hats"}/></div>
-                    <div style={{marginLeft: '43vw'}}><Site site={"plants"}/></div>
+                    <div className="site-link"><Site site={"bikes"}/></div>
+                    <div className="site-link"><Site site={"sofas"}/></div>
+                    <div className="site-link"><Site site={"hats"}/></div>
+                    <div className="site-link"><Site site={"plants"}/></div>
                 </div>
+                <p id="side-note">These are all example pages and nothing shown here is for sale. The site has been designed in this way to display the use of multiple reusable components. Every site has different products and information but the same React components rendering them.</p>
             </div>
          );
     }

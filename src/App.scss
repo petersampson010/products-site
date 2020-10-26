@@ -1,88 +1,81 @@
-.opener{
-  background-color: #eee;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+// set root font-size for all elements based on screen size 
+
+html {
+  font-size: 17px;
+}
+@media (min-width: 441px) {
+  html { font-size: 15px; }
+}
+@media (min-width: 800px) {
+  html { font-size: 13px; }
 }
 
-#welcome-header{
-  position: absolute;
-  width: auto;
-  height: auto;
-  top: 10vh;
-  right: 20vw;
-  font-family: American Typewriter, serif;
-  font-size: 40px;
+// set general component 
+
+h1{
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#welcome{
-  position: absolute;
-  width: 15vw;
-  height: auto;
-  top: 20vh;
-  right: 10vw;
-  font-family: American Typewriter, serif;
-  font-size: 20px;
-  text-align: left;
-}
-
-#side-note{
-  position: absolute;
-  width: 19vw;
-  height: auto;
-  bottom: 14vh;
-  left: 6vw;
-  font-family: American Typewriter;
-  font-size: 16px;
-  text-align: left;
+h2{
+  font-size: .8rem;
 }
 
 .navlink{
   text-decoration: none;
-}
-
-// SITE PAGE //
-.site{
-  display: flex;
-  width: 50vw;
-  height: 13vh;
-  // border-style: solid;
-  // border-width: 10px;
-  // border-color: red;
-  background-color: whitesmoke;
-}
-
-.site:hover{
-  width: 100vw;
-  height: 20vh;
-}
-
-#site-header{
   color: black;
 }
 
-#site-intro{
+// OPENER styling
 
+.opener{
+  background-color: #eee;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
+#welcome-header{
+  font-family: American Typewriter, serif;
+}
 
-// .nav-link:hover{
-//   text-decoration: none;
-// }
+#cloud{
+  height: 24vh;
+  width: 80vw;
+  background-image: url('./images/green-cloud.png');
+  background-size: contain;
+  margin: 0 auto;
+}
 
-h1{
+#cloud-text{
   text-align: center;
-  height: 10vh;
-  width: 100vw;
+  padding-top: 12vh;
+  color: white;
+  width: 50vw;
+  margin: 0 auto;
 }
 
 #sites{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 100vh;
-  width: 100vw;
+  margin: 0 auto;
+  width: 85vw;
 }
+
+// site
+
+.site{
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid darkgreen;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.site-link a:hover{
+  background-color: aquamarine;
+}
+
+// HOME PAGE
 
 
 #navbar{

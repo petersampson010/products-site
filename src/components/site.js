@@ -30,14 +30,7 @@ class Site extends Component {
         return ( 
             <NavLink exact to={'/home'} className="navlink">
                 <div className="site" onClick={() => this.fetchSiteData(this.props.site)}>
-                    <div>
-                        <img src={this.props.image} alt="site"/>
-                    </div>
-                    <div>
-                        <h2 id="site-header">The Sites Header - {this.props.site}</h2>
-                        <p id="site-intro">Description of what the site is selling and the style implemented to accomodate the products</p>
-                    </div>
-
+                    <h3>{this.props.site.toUpperCase()}</h3>
                 </div>
             </NavLink>
          );
@@ -45,7 +38,7 @@ class Site extends Component {
 }
 
 const mapStateToProps = state => {
-    return { 
+    return {
     }
 }
 
